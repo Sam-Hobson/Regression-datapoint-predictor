@@ -5,11 +5,6 @@ from dataclasses import dataclass
 from math import sqrt
 from copy import deepcopy
 
-#
-# Complete the 'calcMissing' function below.
-#
-# The function accepts STRING_ARRAY readings as parameter.
-#
 
 LOOK_AHEAD: int = 100
 INCLUSION_THRESHOLD: float = 0.8
