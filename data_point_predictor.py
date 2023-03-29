@@ -135,7 +135,7 @@ def regress_from(readings: List[str], i: int, forward: bool = True) -> Optional[
     return lines[best_fit_index(snd_derivative)]
 
 
-def calc_missing_readings(readings: List[str]) -> List[str]:
+def calc_missing_readings(readings: List[str], num_missing: int) -> List[str]:
     """I have created a segmented linear regression algorithm to find missing data points.
     It uses 2 linear regressions to estimate the location of the missing data point.
 
@@ -147,8 +147,8 @@ def calc_missing_readings(readings: List[str]) -> List[str]:
     """
     # It isn't good practice to modify input.
     readings_cpy: List[str] = deepcopy(readings)
-    res: List[Optional[float]] = [None] * 20
-    locations: List[int] = [0] * 20
+    res: List[Optional[float]] = [None] * num_missing
+    locations: List[int] = [0] * num_missing
 
     # Find the location of every None value
     j: int = 0
