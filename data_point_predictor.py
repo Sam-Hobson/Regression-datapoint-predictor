@@ -135,7 +135,7 @@ def regress_from(readings: List[str], i: int, forward: bool = True) -> Optional[
     return lines[best_fit_index(snd_derivative)]
 
 
-def calc_missing_functions(readings: List[str]) -> List[str]:
+def calc_missing_readings(readings: List[str]) -> List[str]:
     """I have created a segmented linear regression algorithm to find missing data points.
     It uses 2 linear regressions to estimate the location of the missing data point.
 
